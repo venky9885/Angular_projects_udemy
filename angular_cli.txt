@@ -1,0 +1,54 @@
+npm install --save  bootstrap@3
+npm install bootstrap jquery --save
+npm install popper.js
+"styles": [
+              "../recipe/node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "../recipe/node_modules/jquery/dist/jquery.min.js",
+              "../recipe/node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "../recipe/node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+
+]----
+ng new mf-app --no-strict
+cd mf-app
+ng serve
+---generate component--
+ng g c file_name --skip-tests=true
+selector hell.component.ts
+---Crete project
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/9118764#notes
+---
+Due to dependency version mismatches, running the attachments might fail though -
+ in that case, you can try the following:
+1) Create a new project via ng new my-project --strict false (the --strict false part is important!)
+2) Copy the content of the ZIP attachment src/app folder into the newly created project src/app folder.
+3) Run your project (my-project) via ng serve
+If you try to directly run my ZIP attachments, you must run npm install first.
+If you're getting errors when running npm install, you can often solve them by running 
+npm install --legacy-peer-deps instead of npm install.
+---
+data binding
+---ts - html
+{{}}
+[prperty] = "value"
+--- to ts
+(event)="expression"
+---2 way
+[(ngModel)] = "value"
+----------------
+ngfor,ngif,ngstyle,ngclass
+---
+
+
+nstead of:
+
+@ViewChild('serverContentInput') serverContentInput: ElementRef;
+@Contentchild('contentParagraph') paragraph: ElementRef;
+use
+
+@ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;
+@Contentchild('contentParagraph', {static: true}) paragraph: ElementRef;
+

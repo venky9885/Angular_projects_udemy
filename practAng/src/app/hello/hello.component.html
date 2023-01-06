@@ -1,0 +1,8 @@
+<p>hello works!</p>
+<input type="text" class="form-control" (input)="onUpdateServer($event)">
+<input type="text" class="form-control" [(ngModel)]="serverName">
+
+<p [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{online: serverStatus==='online'}">{{serverName}} status
+    {{serverStatus}}</p>
+<!-- <p [ngClass]={}>1222334587</p> -->
+<!-- <input type="text" class="form-control" [(ngModel)]="serverName"> -->

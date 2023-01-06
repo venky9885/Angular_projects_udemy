@@ -1,0 +1,4 @@
+2 way data binding 
+interpolation
+ng if
+ng for

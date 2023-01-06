@@ -1,0 +1,25 @@
+<p>hell works!</p>
+<input type="text" class="form-control" (input)="onUpdateServer($event)">
+<!-- <input type="text" class="form-control" [(ngModel)]="serverName"> -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<p [innerText]="allowNewServer"></p>
+<p>{{serverCreationStatus}}</p>
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-12">
+      <h1>Server comonnenty</h1>
+      <p>{{'Server'}} This is server id {{serverId}} with status{{getServerStatus()}}</p>
+    </div>
+  </div>
+</div>
+
+<!-- ng if else -->
+<p *ngIf="serverCreated else noServer"> server created {{serverStatus}}</p>
+<ng-template #noServer>
+  <p>No Sever was created</p>
+</ng-template>
+<p>server created {{serverStatus}}</p>
+
+
+<app-hello *ngFor="let server of servers"></app-hello>

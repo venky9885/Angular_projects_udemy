@@ -1,0 +1,17 @@
+1. data transferong through componnents
+   Form input from on componnents to other OUTPUT()
+   Display on components to other INPUT()
+   Local refernce
+   viewchild refernce
+   using ng-content for writing html in same page
+
+
+
+----------------------lifecycle------------------------------
+ngOnChanges - called after bound input propeties changed
+ngOnInit - called once the component is initialized
+ngDoCheck - called during every change detection run(button click, input change, time fired)
+ngAfterContentInit - called after content (ng-content) has been projected into view
+ngAfterViewInit - called after the component's view (and child views) has been initialized
+ngAfterViewChecked - called every time the view (and child views) have been checked
+ngOnDestroy - called once the component is about to be destroyed

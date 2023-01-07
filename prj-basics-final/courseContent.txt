@@ -1,0 +1,1 @@
+84-86 ngFor and Ngif with Input and Output decorators

@@ -1,0 +1,16 @@
+<body>
+    <form action="">
+        <label for="serverName">Server Name</label>
+        <input type="text" #serName id="serverName" name="serverName  " />
+
+        <br>
+        <div style="height: 20px;"></div>
+
+        <label for="serverContent">Server Content</label>
+        <input type="text" id="serverContent" #serCont name="serverContent" />
+
+        <br>
+        <div style="height: 20px;"></div>
+        <button type="submit" (click)="onsub(serName)">Add Server</button>
+    </form>
+</body>

@@ -52,3 +52,26 @@ use
 @ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;
 @Contentchild('contentParagraph', {static: true}) paragraph: ElementRef;
 
+
+-----------------
+@Injectable({providedIn: 'root'})
+export class MyService { ... }
+This is exactly the same as:
+
+export class MyService { ... }
+and
+
+import { MyService } from './path/to/my.service';
+ 
+@NgModule({
+    ...
+    providers: [MyService]
+})
+export class AppModule { ... }
+
+----------------------RXJS------------
+npm install --save rxjs@6
+In addition, also install the rxjs-compat package:
+
+npm install --save rxjs-compat
+---------------------------------------
